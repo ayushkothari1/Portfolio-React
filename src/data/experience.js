@@ -1,0 +1,32 @@
+export const experiences = [
+  {
+    id: 1,
+    type: 'work',
+    role: 'Frontend Developer Intern',
+    company: 'TechStartup Co.',
+    duration: 'Jun 2024 – Present',
+    location: 'Remote',
+    description: 'Building responsive React applications, implementing UI/UX designs from Figma, and optimizing web performance. Collaborated with backend team on REST API integrations.',
+    tech: ['React', 'Tailwind CSS', 'Node.js', 'Git'],
+  },
+  {
+    id: 2,
+    type: 'education',
+    role: 'B.Tech — Computer Science',
+    company: 'XYZ University',
+    duration: '2022 – 2026',
+    location: 'India',
+    description: 'Pursuing a Bachelor\'s in Computer Science with focus on web technologies, data structures, and software engineering principles.',
+    tech: ['DSA', 'DBMS', 'OS', 'Networking'],
+  },
+  {
+    id: 3,
+    type: 'freelance',
+    role: 'Freelance Web Developer',
+    company: 'Self-Employed',
+    duration: '2023 – Present',
+    location: 'Remote',
+    description: 'Delivered 5+ custom websites for small businesses and individuals. Focused on performance, SEO, and responsive design.',
+    tech: ['HTML', 'CSS', 'JavaScript', 'React'],
+  },
+];

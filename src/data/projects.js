@@ -1,0 +1,81 @@
+/**
+ * Projects data — update with your real projects
+ * Each project: id, title, description, category, tech[], github, live, featured, gradient
+ */
+
+export const CATEGORIES = ['All', 'Frontend', 'Full Stack', 'AI/ML', 'Tools'];
+
+export const projects = [
+  {
+    id: 1,
+    title: 'NeuralChat AI',
+    description: 'A real-time AI chat application powered by OpenAI GPT-4. Features streaming responses, conversation history, and a stunning glassmorphism UI.',
+    category: 'AI/ML',
+    tech: ['React', 'Node.js', 'OpenAI', 'WebSockets', 'Tailwind'],
+    github: 'https://github.com/ayush',
+    live: 'https://neuralchat.demo',
+    featured: true,
+    gradient: 'from-violet-600 to-indigo-600',
+    color: '#6366f1',
+  },
+  {
+    id: 2,
+    title: 'ShopDe E-Commerce',
+    description: 'A full-featured e-commerce platform with cart management, product filtering, and local storage persistence. Built with vanilla JS.',
+    category: 'Frontend',
+    tech: ['HTML', 'CSS', 'JavaScript', 'LocalStorage'],
+    github: 'https://github.com/ayush',
+    live: 'https://shopde.demo',
+    featured: true,
+    gradient: 'from-pink-600 to-rose-600',
+    color: '#ec4899',
+  },
+  {
+    id: 3,
+    title: 'DevFlow Dashboard',
+    description: 'A developer productivity dashboard with GitHub stats integration, task management, and a customizable widget system.',
+    category: 'Full Stack',
+    tech: ['React', 'Node.js', 'GitHub API', 'MongoDB', 'Chart.js'],
+    github: 'https://github.com/ayush',
+    live: 'https://devflow.demo',
+    featured: true,
+    gradient: 'from-cyan-600 to-blue-600',
+    color: '#06b6d4',
+  },
+  {
+    id: 4,
+    title: 'PixelForge Design Tool',
+    description: 'A browser-based design tool inspired by Figma. Supports layers, shapes, text, and export to SVG/PNG.',
+    category: 'Tools',
+    tech: ['React', 'Canvas API', 'Konva.js', 'Zustand'],
+    github: 'https://github.com/ayush',
+    live: 'https://pixelforge.demo',
+    featured: false,
+    gradient: 'from-amber-600 to-orange-600',
+    color: '#f59e0b',
+  },
+  {
+    id: 5,
+    title: 'WeatherSphere',
+    description: 'A beautiful weather app with animated weather visualizations, 7-day forecasts, and location detection.',
+    category: 'Frontend',
+    tech: ['React', 'OpenWeather API', 'Framer Motion', 'Tailwind'],
+    github: 'https://github.com/ayush',
+    live: 'https://weathersphere.demo',
+    featured: false,
+    gradient: 'from-sky-600 to-cyan-600',
+    color: '#0ea5e9',
+  },
+  {
+    id: 6,
+    title: 'CodeSnippet Vault',
+    description: 'A personal code snippet manager with syntax highlighting, tag filtering, and one-click copy. Never lose a snippet again.',
+    category: 'Tools',
+    tech: ['React', 'Prism.js', 'LocalStorage', 'Tailwind'],
+    github: 'https://github.com/ayush',
+    live: 'https://snippetvault.demo',
+    featured: false,
+    gradient: 'from-emerald-600 to-teal-600',
+    color: '#10b981',
+  },
+];
