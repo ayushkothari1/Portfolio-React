@@ -86,7 +86,7 @@ export default function About() {
             className="space-y-6"
           >
             <p className="text-lg text-[var(--color-text-muted)] leading-relaxed">
-              Hey, I'm <strong className="text-indigo-400 font-semibold">Ayush</strong> — a frontend
+              Hey, I'm <strong className="text-indigo-400 font-semibold">Ayush Kothari</strong> — a frontend
               developer and creative coder from India. I build modern, responsive web apps with React
               and love crafting pixel-perfect UI that feels alive.
             </p>

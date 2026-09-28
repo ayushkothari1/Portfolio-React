@@ -21,7 +21,7 @@ export default function Hero() {
     <section
       id="hero"
       ref={ref}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 sm:pt-28"
     >
       {/* Animated gradient orbs */}
       <motion.div style={{ y }} className="absolute inset-0 pointer-events-none">
@@ -137,7 +137,7 @@ export default function Hero() {
               </motion.a>
             ))}
             <div className="w-px h-4 bg-white/10" />
-            <span className="text-xs text-[var(--color-text-muted)]">ayush@example.com</span>
+            <span className="text-xs text-[var(--color-text-muted)]">pahadiayush61@gmail.com</span>
           </motion.div>
         </motion.div>
 

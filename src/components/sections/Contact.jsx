@@ -9,7 +9,7 @@ const SOCIAL = [
   { icon: FiGithub,   href: 'https://github.com/ayush',        label: 'GitHub' },
   { icon: FiLinkedin, href: 'https://linkedin.com/in/ayush',   label: 'LinkedIn' },
   { icon: FiTwitter,  href: 'https://twitter.com/ayush',       label: 'Twitter' },
-  { icon: FiMail,     href: 'mailto:ayush@example.com',        label: 'Email' },
+  { icon: FiMail,     href: 'mailto:pahadiayush61@gmail.com',  label: 'Email' },
 ];
 
 /** Animated form input field */
@@ -210,11 +210,11 @@ export default function Contact() {
             <motion.div variants={staggerItem} className="glass rounded-2xl p-6 border border-subtle space-y-4">
               <h3 className="font-semibold text-[var(--color-text)] mb-2">Direct Contact</h3>
               <a
-                href="mailto:ayush@example.com"
+                href="mailto:pahadiayush61@gmail.com"
                 className="flex items-center gap-3 text-sm text-[var(--color-text-muted)] hover:text-indigo-400 transition-colors duration-200"
               >
                 <FiMail size={16} className="text-indigo-400 flex-shrink-0" />
-                ayush@example.com
+                pahadiayush61@gmail.com
               </a>
             </motion.div>
 

@@ -1,5 +1,5 @@
 /**
- * Skills data — update proficiency levels (0-100) to match your real skills
+ * Skills data grouped by category
  */
 
 export const skillCategories = [
@@ -9,12 +9,12 @@ export const skillCategories = [
     icon: 'FaCode',
     color: '#6366f1',
     skills: [
-      { name: 'React',       level: 85, icon: 'FaReact' },
-      { name: 'JavaScript',  level: 90, icon: 'SiJavascript' },
-      { name: 'TypeScript',  level: 70, icon: 'SiTypescript' },
-      { name: 'HTML5',       level: 95, icon: 'FaHtml5' },
-      { name: 'CSS3',        level: 90, icon: 'FaCss3Alt' },
-      { name: 'Tailwind',    level: 85, icon: 'SiTailwindcss' },
+      { name: 'React',       icon: 'FaReact' },
+      { name: 'JavaScript',  icon: 'SiJavascript' },
+      { name: 'TypeScript',  icon: 'SiTypescript' },
+      { name: 'HTML5',       icon: 'FaHtml5' },
+      { name: 'CSS3',        icon: 'FaCss3Alt' },
+      { name: 'Tailwind',    icon: 'SiTailwindcss' },
     ],
   },
   {
@@ -23,10 +23,10 @@ export const skillCategories = [
     icon: 'FaServer',
     color: '#8b5cf6',
     skills: [
-      { name: 'Node.js',     level: 70, icon: 'FaNodeJs' },
-      { name: 'Express',     level: 65, icon: 'SiExpress' },
-      { name: 'MongoDB',     level: 65, icon: 'SiMongodb' },
-      { name: 'REST APIs',   level: 80, icon: 'FaReact' },
+      { name: 'Node.js',     icon: 'FaNodeJs' },
+      { name: 'Express',     icon: 'SiExpress' },
+      { name: 'MongoDB',     icon: 'SiMongodb' },
+      { name: 'REST APIs',   icon: 'FaReact' },
     ],
   },
   {
@@ -35,10 +35,10 @@ export const skillCategories = [
     icon: 'FaTools',
     color: '#ec4899',
     skills: [
-      { name: 'Git & GitHub', level: 85, icon: 'FaGithub' },
-      { name: 'Vite',         level: 80, icon: 'SiVite' },
-      { name: 'Figma',        level: 70, icon: 'FaFigma' },
-      { name: 'VS Code',      level: 95, icon: 'SiVisualstudiocode' },
+      { name: 'Git & GitHub', icon: 'FaGithub' },
+      { name: 'Vite',         icon: 'SiVite' },
+      { name: 'Figma',        icon: 'FaFigma' },
+      { name: 'VS Code',      icon: 'SiVisualstudiocode' },
     ],
   },
   {
@@ -47,10 +47,10 @@ export const skillCategories = [
     icon: 'FaGraduationCap',
     color: '#06b6d4',
     skills: [
-      { name: 'Next.js',      level: 50, icon: 'SiNextdotjs' },
-      { name: 'Python',       level: 55, icon: 'FaPython' },
-      { name: 'AI Workflows', level: 45, icon: 'FaReact' },
-      { name: 'Docker',       level: 40, icon: 'FaDocker' },
+      { name: 'Next.js',      icon: 'SiNextdotjs' },
+      { name: 'Python',       icon: 'FaPython' },
+      { name: 'AI Workflows', icon: 'FaReact' },
+      { name: 'Docker',       icon: 'FaDocker' },
     ],
   },
 ];

@@ -23,27 +23,18 @@ const ICON_MAP = {
   SiVisualstudiocode: FaReact, // fallback icon
 };
 
-/** Animated skill bar */
-function SkillBar({ name, level, icon, inView }) {
+/** Interactive skill tag with no proficiency rating */
+function SkillTag({ name, icon }) {
   const Icon = ICON_MAP[icon];
   return (
-    <div className="space-y-2">
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          {Icon && <Icon size={14} className="text-indigo-400 flex-shrink-0" />}
-          <span className="text-sm font-medium text-[var(--color-text)]">{name}</span>
-        </div>
-        <span className="text-xs text-[var(--color-text-muted)]">{level}%</span>
-      </div>
-      <div className="h-1.5 rounded-full bg-white/5 overflow-hidden">
-        <motion.div
-          className="skill-bar-fill h-full rounded-full"
-          initial={{ width: 0 }}
-          animate={{ width: inView ? `${level}%` : 0 }}
-          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-        />
-      </div>
-    </div>
+    <motion.span
+      whileHover={{ y: -3, scale: 1.04 }}
+      transition={{ type: 'spring', stiffness: 320, damping: 20 }}
+      className="inline-flex items-center gap-2 rounded-xl border border-subtle bg-white/5 px-3 py-2 text-sm font-medium text-[var(--color-text)] transition-colors duration-200 hover:border-indigo-500/40 hover:bg-indigo-500/10"
+    >
+      {Icon && <Icon size={15} className="text-indigo-400 flex-shrink-0" />}
+      {name}
+    </motion.span>
   );
 }
 
@@ -69,10 +60,10 @@ function SkillCard({ category, inView }) {
         <h3 className="font-semibold text-[var(--color-text)]">{category.label}</h3>
       </div>
 
-      {/* Skill bars */}
-      <div className="space-y-4">
+      {/* Skill tags */}
+      <div className="flex flex-wrap gap-2.5">
         {category.skills.map(skill => (
-          <SkillBar key={skill.name} {...skill} inView={inView} />
+          <SkillTag key={skill.name} {...skill} />
         ))}
       </div>
     </motion.div>
@@ -80,7 +71,7 @@ function SkillCard({ category, inView }) {
 }
 
 /**
- * Skills — bento grid layout with animated skill bars per category
+ * Skills — bento grid layout with animated skill tags per category
  */
 export default function Skills() {
   const ref    = useRef(null);

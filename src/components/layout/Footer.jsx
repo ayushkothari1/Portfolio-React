@@ -5,7 +5,7 @@ const SOCIAL_LINKS = [
   { icon: FiGithub,   href: 'https://github.com/ayush',   label: 'GitHub' },
   { icon: FiLinkedin, href: 'https://linkedin.com/in/ayush', label: 'LinkedIn' },
   { icon: FiTwitter,  href: 'https://twitter.com/ayush',  label: 'Twitter' },
-  { icon: FiMail,     href: 'mailto:ayush@example.com',   label: 'Email' },
+  { icon: FiMail,     href: 'mailto:pahadiayush61@gmail.com', label: 'Email' },
 ];
 
 /**
@@ -25,7 +25,7 @@ export default function Footer() {
           viewport={{ once: true }}
           className="font-display font-bold text-2xl"
         >
-          <span className="gradient-text">Ayush</span>
+          <span className="gradient-text">Ayush Kothari</span>
           <span className="text-[var(--color-text-muted)]">.</span>
         </motion.div>
 
@@ -67,7 +67,7 @@ export default function Footer() {
           className="text-sm text-[var(--color-text-muted)] flex items-center gap-1.5"
         >
           Made with <FiHeart size={13} className="text-pink-500 animate-pulse" /> by{' '}
-          <span className="text-indigo-400 font-medium">Ayush</span> · {new Date().getFullYear()}
+          <span className="text-indigo-400 font-medium">Ayush Kothari</span> · {new Date().getFullYear()}
         </motion.p>
       </div>
     </footer>

@@ -71,7 +71,7 @@ export default function Navbar({ activeSection, isDark, toggleTheme }) {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="gradient-text">Ayush</span>
+            <span className="gradient-text">Ayush Kothari</span>
             <span className="text-[var(--color-text-muted)]">.</span>
           </motion.button>
 
@@ -216,7 +216,7 @@ export default function Navbar({ activeSection, isDark, toggleTheme }) {
 
             <div className="mt-auto">
               <a
-                href="mailto:ayush@example.com"
+                href="mailto:pahadiayush61@gmail.com"
                 className="
                   block text-center px-6 py-3 rounded-xl font-semibold text-white
                   bg-gradient-to-r from-indigo-600 to-violet-600
