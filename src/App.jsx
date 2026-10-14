@@ -6,12 +6,11 @@ import Hero from './components/sections/Hero';
 import About from './components/sections/About';
 import Skills from './components/sections/Skills';
 import Projects from './components/sections/Projects';
-import Experience from './components/sections/Experience';
 import Contact from './components/sections/Contact';
 import AnimatedCursor from './components/ui/AnimatedCursor';
 import ParticleBackground from './components/ui/ParticleBackground';
 
-const SECTION_IDS = ['hero', 'about', 'skills', 'projects', 'experience', 'contact'];
+const SECTION_IDS = ['hero', 'about', 'skills', 'projects', 'contact'];
 
 /**
  * App — root component
@@ -40,7 +39,6 @@ export default function App() {
         <About />
         <Skills />
         <Projects />
-        <Experience />
         <Contact />
       </main>
 

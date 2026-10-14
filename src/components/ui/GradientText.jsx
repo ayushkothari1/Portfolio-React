@@ -1,5 +1,3 @@
-import { motion } from 'framer-motion';
-
 /**
  * GradientText — animated gradient text with shimmer effect
  */

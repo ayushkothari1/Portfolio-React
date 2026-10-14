@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import { motion, AnimatePresence, useInView } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
 import { projects, CATEGORIES } from '../../data/projects';
 import { staggerContainer, staggerItem } from '../../utils/animations';
@@ -123,8 +123,6 @@ function ProjectCard({ project, index }) {
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState('All');
   const ref    = useRef(null);
-  const inView = useInView(ref, { once: true, amount: 0.1 });
-
   const filtered = activeFilter === 'All'
     ? projects
     : projects.filter(p => p.category === activeFilter);
@@ -151,7 +149,7 @@ export default function Projects() {
           transition={{ delay: 0.1 }}
           className="font-display font-black text-4xl md:text-5xl leading-tight mb-4 text-[var(--color-text)]"
         >
-          Things I've <GradientText>Built</GradientText>
+          <GradientText>Featured Projects</GradientText>
         </motion.h2>
 
         <motion.p
@@ -161,7 +159,7 @@ export default function Projects() {
           transition={{ delay: 0.15 }}
           className="text-[var(--color-text-muted)] max-w-lg mb-10"
         >
-          A curated selection of projects — from side experiments to production-ready apps.
+          A few projects I’ve worked on, with links to the code and live versions.
         </motion.p>
 
         {/* Filter tabs */}

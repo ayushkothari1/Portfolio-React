@@ -13,7 +13,6 @@ const NAV_LINKS = [
   { id: "about", label: "About" },
   { id: "skills", label: "Skills" },
   { id: "projects", label: "Projects" },
-  { id: "experience", label: "Experience" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -216,7 +215,11 @@ export default function Navbar({ activeSection, isDark, toggleTheme }) {
 
             <div className="mt-auto">
               <a
-                href="mailto:pahadiayush61@gmail.com"
+                href="#contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollTo("contact");
+                }}
                 className="
                   block text-center px-6 py-3 rounded-xl font-semibold text-white
                   bg-gradient-to-r from-indigo-600 to-violet-600

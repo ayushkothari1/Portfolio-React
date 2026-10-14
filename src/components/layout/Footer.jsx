@@ -2,19 +2,17 @@ import { motion } from "framer-motion";
 import {
   FiGithub,
   FiLinkedin,
-  FiTwitter,
   FiMail,
-  FiHeart,
 } from "react-icons/fi";
 
 const SOCIAL_LINKS = [
-  { icon: FiGithub, href: "https://github.com/ayush", label: "GitHub" },
+  { icon: FiGithub, href: "https://github.com/ayushkothari1", label: "GitHub" },
   {
     icon: FiLinkedin,
-    href: "https://linkedin.com/in/ayush",
+    href: "https://www.linkedin.com/in/ayushko1/",
     label: "LinkedIn",
   },
-  { icon: FiTwitter, href: "https://twitter.com/ayush", label: "Twitter" },
+
   { icon: FiMail, href: "mailto:pahadiayush61@gmail.com", label: "Email" },
 ];
 
@@ -74,12 +72,9 @@ export default function Footer() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="text-sm text-[var(--color-text-muted)] flex items-center gap-1.5"
+          className="text-sm text-[var(--color-text-muted)]"
         >
-          Made with{" "}
-          <FiHeart size={13} className="text-pink-500 animate-pulse" /> by{" "}
-          <span className="text-indigo-400 font-medium">Ayush Kothari</span> ·{" "}
-          {new Date().getFullYear()}
+          © 2026 Ayush Kothari
         </motion.p>
       </div>
     </footer>

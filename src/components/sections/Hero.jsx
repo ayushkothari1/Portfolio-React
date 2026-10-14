@@ -1,9 +1,8 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { FiArrowDown, FiGithub, FiLinkedin } from 'react-icons/fi';
-import { HiSparkles } from 'react-icons/hi';
 import Button from '../ui/Button';
-import { staggerContainer, staggerItem, heroTitle } from '../../utils/animations';
+import { staggerContainer, staggerItem } from '../../utils/animations';
 
 /**
  * Hero — Full-viewport hero with animated gradient, stagger text, mouse-glow orbs
@@ -61,19 +60,14 @@ export default function Hero() {
               inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium
               border border-indigo-500/30 bg-indigo-500/10 text-indigo-300
             ">
-              <HiSparkles className="text-indigo-400 animate-pulse" size={14} />
-              Open to Internships &amp; Freelance
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              Available for Opportunities
             </span>
           </motion.div>
 
           {/* Main heading */}
           <motion.div variants={staggerItem} className="space-y-2">
             <h1 className="font-display font-black text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[1.05] tracking-tight text-[var(--color-text)]">
-              Crafting{' '}
-              <span className="gradient-text">Digital</span>
-              <br />
-              Experiences
+              I build <span className="gradient-text">web apps</span> with React.
             </h1>
           </motion.div>
 
@@ -82,26 +76,8 @@ export default function Hero() {
             variants={staggerItem}
             className="max-w-xl text-lg md:text-xl text-[var(--color-text-muted)] text-balance leading-relaxed"
           >
-            Frontend Developer passionate about building fast, beautiful, and
-            accessible web experiences with modern React & design systems.
+            I build responsive web applications, integrate APIs, and turn ideas into working products.
           </motion.p>
-
-          {/* Stats row */}
-          <motion.div
-            variants={staggerItem}
-            className="flex flex-wrap justify-center gap-6 text-sm"
-          >
-            {[
-              { value: '20+', label: 'Personal Projects' },
-              { value: 'React', label: 'Currently Mastering' },
-              { value: 'AI', label: 'Exploring Workflows' },
-            ].map(({ value, label }) => (
-              <div key={label} className="flex items-center gap-2">
-                <span className="font-bold text-indigo-400 font-display">{value}</span>
-                <span className="text-[var(--color-text-muted)]">{label}</span>
-              </div>
-            ))}
-          </motion.div>
 
           {/* CTA buttons */}
           <motion.div variants={staggerItem} className="flex flex-wrap items-center justify-center gap-4 pt-2">
@@ -112,7 +88,7 @@ export default function Hero() {
             >
               View Projects
             </Button>
-            <Button variant="ghost" size="lg" href="https://github.com/ayush" target="_blank" rel="noopener noreferrer">
+            <Button variant="ghost" size="lg" href="https://github.com/ayushkothari1" target="_blank" rel="noopener noreferrer">
               <FiGithub size={18} /> GitHub
             </Button>
           </motion.div>
@@ -120,8 +96,8 @@ export default function Hero() {
           {/* Social row */}
           <motion.div variants={staggerItem} className="flex items-center gap-4 pt-2">
             {[
-              { icon: FiGithub,   href: 'https://github.com/ayush',      label: 'GitHub' },
-              { icon: FiLinkedin, href: 'https://linkedin.com/in/ayush', label: 'LinkedIn' },
+              { icon: FiGithub,   href: 'https://github.com/ayushkothari1', label: 'GitHub' },
+              { icon: FiLinkedin, href: 'https://www.linkedin.com/in/ayushko1/', label: 'LinkedIn' },
             ].map(({ icon: Icon, href, label }) => (
               <motion.a
                 key={label}

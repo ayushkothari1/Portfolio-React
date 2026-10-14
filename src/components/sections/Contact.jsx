@@ -1,30 +1,52 @@
-import { useState, useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
-import { FiSend, FiMail, FiGithub, FiLinkedin, FiTwitter, FiCheck, FiAlertCircle } from 'react-icons/fi';
-import { staggerContainer, staggerItem } from '../../utils/animations';
-import Button from '../ui/Button';
-import GradientText from '../ui/GradientText';
+import { useState, useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import {
+  FiSend,
+  FiMail,
+  FiGithub,
+  FiLinkedin,
+  FiCheck,
+} from "react-icons/fi";
+import { staggerContainer, staggerItem } from "../../utils/animations";
+import Button from "../ui/Button";
+import GradientText from "../ui/GradientText";
 
 const SOCIAL = [
-  { icon: FiGithub,   href: 'https://github.com/ayush',        label: 'GitHub' },
-  { icon: FiLinkedin, href: 'https://linkedin.com/in/ayush',   label: 'LinkedIn' },
-  { icon: FiTwitter,  href: 'https://twitter.com/ayush',       label: 'Twitter' },
-  { icon: FiMail,     href: 'mailto:pahadiayush61@gmail.com',  label: 'Email' },
+  { icon: FiGithub, href: "https://github.com/ayushkothari1", label: "GitHub" },
+  {
+    icon: FiLinkedin,
+    href: "https://www.linkedin.com/in/ayushko1/",
+    label: "LinkedIn",
+  },
+
+  { icon: FiMail, href: "mailto:pahadiayush61@gmail.com", label: "Email" },
 ];
 
 /** Animated form input field */
-function FormField({ label, id, type = 'text', rows, value, onChange, required, placeholder }) {
-  const Tag = rows ? 'textarea' : 'input';
+function FormField({
+  label,
+  id,
+  type = "text",
+  rows,
+  value,
+  onChange,
+  required,
+  placeholder,
+}) {
+  const Tag = rows ? "textarea" : "input";
 
   return (
     <div className="space-y-1.5">
-      <label htmlFor={id} className="block text-sm font-medium text-[var(--color-text)]">
+      <label
+        htmlFor={id}
+        className="block text-sm font-medium text-[var(--color-text)]"
+      >
         {label} {required && <span className="text-indigo-400">*</span>}
       </label>
       <Tag
         id={id}
         name={id}
-        type={type}
+        {...(!rows ? { type } : {})}
         rows={rows}
         value={value}
         onChange={onChange}
@@ -38,7 +60,7 @@ function FormField({ label, id, type = 'text', rows, value, onChange, required, 
           transition-all duration-200
           resize-none
         "
-        style={{ fontFamily: 'inherit' }}
+        style={{ fontFamily: "inherit" }}
       />
     </div>
   );
@@ -48,28 +70,21 @@ function FormField({ label, id, type = 'text', rows, value, onChange, required, 
  * Contact — form + social links + availability status
  */
 export default function Contact() {
-  const ref    = useRef(null);
+  const ref = useRef(null);
   const inView = useInView(ref, { once: true, amount: 0.15 });
 
-  const [form,   setForm]   = useState({ name: '', email: '', message: '' });
-  const [status, setStatus] = useState('idle'); // idle | sending | success | error
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [status, setStatus] = useState("idle");
 
   const handleChange = (e) =>
-    setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
+    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setStatus('sending');
-
-    // Simulate send (replace with EmailJS or backend call)
-    await new Promise(r => setTimeout(r, 1500));
-
-    // Success simulation (swap for real error handling)
-    setStatus('success');
-    setForm({ name: '', email: '', message: '' });
-
-    // Reset after 4s
-    setTimeout(() => setStatus('idle'), 4000);
+    const subject = `Portfolio message from ${form.name}`;
+    const body = `${form.message}\n\nReply to: ${form.email}`;
+    window.location.href = `mailto:pahadiayush61@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    setStatus("opened");
   };
 
   return (
@@ -104,7 +119,8 @@ export default function Contact() {
           transition={{ delay: 0.15 }}
           className="text-[var(--color-text-muted)] max-w-lg mb-12"
         >
-          Have a project in mind, or just want to say hi? My inbox is always open.
+          Send me a note by email. The form opens a draft in your email app for
+          you to review and send.
         </motion.p>
 
         <div ref={ref} className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -112,27 +128,37 @@ export default function Contact() {
           <motion.div
             variants={staggerContainer(0.1)}
             initial="hidden"
-            animate={inView ? 'visible' : 'hidden'}
+            animate={inView ? "visible" : "hidden"}
           >
             <motion.form
               variants={staggerItem}
               onSubmit={handleSubmit}
               className="glass rounded-2xl p-8 border border-subtle space-y-5"
-              noValidate
             >
               <FormField
-                id="name" label="Name" value={form.name}
-                onChange={handleChange} required
+                id="name"
+                label="Name"
+                value={form.name}
+                onChange={handleChange}
+                required
                 placeholder="Your full name"
               />
               <FormField
-                id="email" label="Email" type="email" value={form.email}
-                onChange={handleChange} required
+                id="email"
+                label="Email"
+                type="email"
+                value={form.email}
+                onChange={handleChange}
+                required
                 placeholder="you@example.com"
               />
               <FormField
-                id="message" label="Message" rows={5} value={form.message}
-                onChange={handleChange} required
+                id="message"
+                label="Message"
+                rows={5}
+                value={form.message}
+                onChange={handleChange}
+                required
                 placeholder="Tell me about your project..."
               />
 
@@ -142,40 +168,22 @@ export default function Contact() {
                 variant="primary"
                 size="lg"
                 className="w-full"
-                disabled={status === 'sending'}
               >
-                {status === 'sending' ? (
-                  <>
-                    <svg className="animate-spin h-4 w-4" viewBox="0 0 24 24" fill="none">
-                      <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="3" strokeOpacity="0.3" />
-                      <path d="M12 2a10 10 0 0 1 10 10" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
-                    </svg>
-                    Sending…
-                  </>
-                ) : status === 'success' ? (
-                  <><FiCheck size={18} /> Message Sent!</>
-                ) : (
-                  <><FiSend size={18} /> Send Message</>
-                )}
+                <>
+                  <FiSend size={18} /> Open Email Draft
+                </>
               </Button>
 
               {/* Status messages */}
-              {status === 'success' && (
+              {status === "opened" && (
                 <motion.p
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
+                  aria-live="polite"
                   className="flex items-center gap-2 text-sm text-emerald-400 font-medium"
                 >
-                  <FiCheck size={15} /> Thanks! I'll get back to you soon.
-                </motion.p>
-              )}
-              {status === 'error' && (
-                <motion.p
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="flex items-center gap-2 text-sm text-red-400 font-medium"
-                >
-                  <FiAlertCircle size={15} /> Something went wrong. Please try again.
+                  <FiCheck size={15} /> Your email app should open with the
+                  message ready to review.
                 </motion.p>
               )}
             </motion.form>
@@ -185,7 +193,7 @@ export default function Contact() {
           <motion.div
             variants={staggerContainer(0.1)}
             initial="hidden"
-            animate={inView ? 'visible' : 'hidden'}
+            animate={inView ? "visible" : "hidden"}
             className="flex flex-col gap-6"
           >
             {/* Availability card */}
@@ -194,21 +202,24 @@ export default function Contact() {
               className="glass rounded-2xl p-6 border border-subtle"
             >
               <div className="flex items-center gap-3 mb-3">
-                <div className="relative">
-                  <div className="w-3 h-3 rounded-full bg-emerald-400" />
-                  <div className="absolute inset-0 w-3 h-3 rounded-full bg-emerald-400 animate-ping opacity-60" />
-                </div>
-                <span className="font-semibold text-[var(--color-text)]">Available for Work</span>
+                <span className="font-semibold text-[var(--color-text)]">
+                  Get in touch
+                </span>
               </div>
               <p className="text-sm text-[var(--color-text-muted)]">
-                Currently open to internship opportunities, freelance projects, and collaborations.
-                Typical response time is within 24 hours.
+                For questions about a project or to get in touch, send me an
+                email.
               </p>
             </motion.div>
 
             {/* Contact details */}
-            <motion.div variants={staggerItem} className="glass rounded-2xl p-6 border border-subtle space-y-4">
-              <h3 className="font-semibold text-[var(--color-text)] mb-2">Direct Contact</h3>
+            <motion.div
+              variants={staggerItem}
+              className="glass rounded-2xl p-6 border border-subtle space-y-4"
+            >
+              <h3 className="font-semibold text-[var(--color-text)] mb-2">
+                Direct Contact
+              </h3>
               <a
                 href="mailto:pahadiayush61@gmail.com"
                 className="flex items-center gap-3 text-sm text-[var(--color-text-muted)] hover:text-indigo-400 transition-colors duration-200"
@@ -219,8 +230,13 @@ export default function Contact() {
             </motion.div>
 
             {/* Social links */}
-            <motion.div variants={staggerItem} className="glass rounded-2xl p-6 border border-subtle">
-              <h3 className="font-semibold text-[var(--color-text)] mb-4">Connect</h3>
+            <motion.div
+              variants={staggerItem}
+              className="glass rounded-2xl p-6 border border-subtle"
+            >
+              <h3 className="font-semibold text-[var(--color-text)] mb-4">
+                Connect
+              </h3>
               <div className="grid grid-cols-2 gap-3">
                 {SOCIAL.map(({ icon: Icon, href, label }) => (
                   <motion.a
