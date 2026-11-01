@@ -60,7 +60,7 @@ export default function Hero() {
               inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium
               border border-indigo-500/30 bg-indigo-500/10 text-indigo-300
             ">
-              Available for Opportunities
+              Frontend &amp; Full-Stack Developer
             </span>
           </motion.div>
 
@@ -97,7 +97,7 @@ export default function Hero() {
           <motion.div variants={staggerItem} className="flex items-center gap-4 pt-2">
             {[
               { icon: FiGithub,   href: 'https://github.com/ayushkothari1', label: 'GitHub' },
-              { icon: FiLinkedin, href: 'https://www.linkedin.com/in/ayushko1/', label: 'LinkedIn' },
+              { icon: FiLinkedin, href: 'https://linkedin.com/in/ayushko1', label: 'LinkedIn' },
             ].map(({ icon: Icon, href, label }) => (
               <motion.a
                 key={label}
@@ -113,7 +113,7 @@ export default function Hero() {
               </motion.a>
             ))}
             <div className="w-px h-4 bg-white/10" />
-            <span className="text-xs text-[var(--color-text-muted)]">pahadiayush61@gmail.com</span>
+            <a href="mailto:pahadiayush61@gmail.com" className="text-xs text-[var(--color-text-muted)] hover:text-indigo-400">pahadiayush61@gmail.com</a>
           </motion.div>
         </motion.div>
 

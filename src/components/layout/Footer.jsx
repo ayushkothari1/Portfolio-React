@@ -9,7 +9,7 @@ const SOCIAL_LINKS = [
   { icon: FiGithub, href: "https://github.com/ayushkothari1", label: "GitHub" },
   {
     icon: FiLinkedin,
-    href: "https://www.linkedin.com/in/ayushko1/",
+    href: "https://linkedin.com/in/ayushko1",
     label: "LinkedIn",
   },
 

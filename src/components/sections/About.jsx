@@ -82,9 +82,10 @@ export default function About() {
               <strong className="text-indigo-400 font-semibold">
                 Ayush Kothari
               </strong>
-              , a frontend developer from India. I build responsive interfaces
-              with React and JavaScript, integrate APIs, and work with Node.js,
-              Express, and Socket.IO for backend and real-time functionality.
+              , a developer from India focused on building useful web
+              applications. I create responsive React interfaces, connect them
+              to APIs, and build full-stack features with Node.js and Express,
+              including real-time communication with Socket.IO.
             </p>
             <p className="text-[var(--color-text-muted)] leading-relaxed">
               I’m looking for a frontend internship or junior developer role

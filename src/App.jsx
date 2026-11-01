@@ -10,7 +10,7 @@ import Contact from './components/sections/Contact';
 import AnimatedCursor from './components/ui/AnimatedCursor';
 import ParticleBackground from './components/ui/ParticleBackground';
 
-const SECTION_IDS = ['hero', 'about', 'skills', 'projects', 'contact'];
+const SECTION_IDS = ['hero', 'about', 'skills', 'projects', 'other-projects', 'contact'];
 
 /**
  * App — root component
