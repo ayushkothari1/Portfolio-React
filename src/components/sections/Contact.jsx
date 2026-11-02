@@ -109,7 +109,7 @@ export default function Contact() {
           transition={{ delay: 0.1 }}
           className="font-display font-black text-4xl md:text-5xl leading-tight mb-4 text-[var(--color-text)]"
         >
-          Let's <GradientText>Work Together</GradientText>
+          <GradientText>Let's Connect.</GradientText>
         </motion.h2>
 
         <motion.p
@@ -119,8 +119,7 @@ export default function Contact() {
           transition={{ delay: 0.15 }}
           className="text-[var(--color-text-muted)] max-w-lg mb-12"
         >
-          Send me a note by email. The form opens a draft in your email app for
-          you to review and send.
+          I'm open to junior developer opportunities, internships, and conversations about web development.<br /><br />If you'd like to discuss a role, a project, or simply get in touch, feel free to send me an email.
         </motion.p>
 
         <div ref={ref} className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -207,8 +206,7 @@ export default function Contact() {
                 </span>
               </div>
               <p className="text-sm text-[var(--color-text-muted)]">
-                For questions about a project or to get in touch, send me an
-                email.
+                I'm open to junior developer opportunities, internships, and conversations about web development.
               </p>
             </motion.div>
 

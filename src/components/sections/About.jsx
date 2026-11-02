@@ -12,22 +12,22 @@ const highlights = [
   {
     icon: FiCode,
     label: "React & JavaScript",
-    desc: "Building responsive interfaces with reusable components.",
+    desc: "Building responsive interfaces with reusable components and interactive functionality.",
   },
   {
     icon: FiZap,
-    label: "API integration",
-    desc: "Connecting web interfaces to data and services through APIs.",
+    label: "API Integration",
+    desc: "Connecting applications to external services and working with API data.",
   },
   {
     icon: FiHeart,
-    label: "Backend",
-    desc: "Working with Node.js and Express to support web applications.",
+    label: "Backend Development",
+    desc: "Building server-side functionality using Node.js and Express.",
   },
   {
     icon: FiGlobe,
-    label: "Realtime features",
-    desc: "Using Socket.IO to exchange messages between connected users.",
+    label: "Real-Time Features",
+    desc: "Using Socket.IO to support live communication between users.",
   },
 ];
 
@@ -60,9 +60,7 @@ export default function About() {
           transition={{ delay: 0.1 }}
           className="font-display font-black text-4xl md:text-5xl lg:text-6xl leading-tight mb-16 text-[var(--color-text)]"
         >
-          A little about <GradientText>what I build</GradientText>
-          <br />
-          for the web.
+          I enjoy building <GradientText>useful things</GradientText> for the web.
         </motion.h2>
 
         {/* Two-column layout */}
@@ -82,14 +80,10 @@ export default function About() {
               <strong className="text-indigo-400 font-semibold">
                 Ayush Kothari
               </strong>
-              , a developer from India focused on building useful web
-              applications. I create responsive React interfaces, connect them
-              to APIs, and build full-stack features with Node.js and Express,
-              including real-time communication with Socket.IO.
+              , a developer from India focused on building responsive, interactive web applications. I work with React and JavaScript to create user interfaces, integrate APIs, and develop features that make applications useful.
             </p>
             <p className="text-[var(--color-text-muted)] leading-relaxed">
-              I’m looking for a frontend internship or junior developer role
-              where I can contribute to user-facing features and keep learning.
+              I've also worked with Node.js, Express, and Socket.IO to build backend functionality and real-time applications. Through projects like Nexora, ChatBox, and Animal Atlas, I've been learning by building and improving practical applications.<br /><br />I'm looking for a junior developer role or internship where I can contribute to real projects, strengthen my skills, and grow as a developer.
             </p>
 
             {/* Tags */}

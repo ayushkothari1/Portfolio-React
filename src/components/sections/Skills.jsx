@@ -106,7 +106,7 @@ export default function Skills() {
           transition={{ delay: 0.15 }}
           className="text-[var(--color-text-muted)] mb-12 max-w-lg"
         >
-          Technologies used in the projects shown here.
+          Technologies I've used while building my projects.
         </motion.p>
 
         {/* Bento grid */}

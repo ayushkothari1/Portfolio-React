@@ -76,7 +76,7 @@ export default function Projects() {
         <div className="container-max">
           <div className="section-kicker"><span className="badge">Selected work</span><span className="kicker-rule" /></div>
           <h2 className="projects-heading">Featured Projects</h2>
-          <p className="projects-intro">A closer look at the web applications I’ve been building across product interfaces, APIs, and real-time features.</p>
+          <p className="projects-intro">Applications I've built to explore frontend development, API integration, and real-time functionality.</p>
           <div className="featured-projects-grid">
             {featuredProjects.map((project, index) => <ProjectCard key={project.id} project={project} index={index} />)}
           </div>

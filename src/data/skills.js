@@ -34,7 +34,8 @@ export const skillCategories = [
     icon: 'FaTools',
     color: '#ec4899',
     skills: [
-      { name: 'Git & GitHub', icon: 'FaGithub' },
+      { name: 'Git', icon: 'FaGithub' },
+      { name: 'GitHub', icon: 'FaGithub' },
       { name: 'Vite',         icon: 'SiVite' },
     ],
   },

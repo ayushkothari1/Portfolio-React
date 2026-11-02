@@ -60,14 +60,14 @@ export default function Hero() {
               inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium
               border border-indigo-500/30 bg-indigo-500/10 text-indigo-300
             ">
-              Frontend &amp; Full-Stack Developer
+              Available for Opportunities
             </span>
           </motion.div>
 
           {/* Main heading */}
           <motion.div variants={staggerItem} className="space-y-2">
             <h1 className="font-display font-black text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[1.05] tracking-tight text-[var(--color-text)]">
-              I build <span className="gradient-text">web apps</span> with React.
+              I build responsive web applications with React.
             </h1>
           </motion.div>
 
@@ -76,7 +76,7 @@ export default function Hero() {
             variants={staggerItem}
             className="max-w-xl text-lg md:text-xl text-[var(--color-text-muted)] text-balance leading-relaxed"
           >
-            I build responsive web applications, integrate APIs, and turn ideas into working products.
+            I turn ideas into functional web applications using JavaScript, React, APIs, and modern web technologies. I also build backend features with Node.js and Express.
           </motion.p>
 
           {/* CTA buttons */}
