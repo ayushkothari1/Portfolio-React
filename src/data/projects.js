@@ -65,4 +65,14 @@ export const otherProjects = [
     github: 'https://github.com/ayushkothari1/React-/tree/main/todoLocalS',
     live: 'https://react-qh5r.vercel.app/',
   },
+  {
+    id: 'shopde',
+    title: 'SHOPDE',
+    category: 'E-Commerce Website',
+    description:
+      'SHOPDE is a responsive shopping website featuring clothing, food, cosmetics, and furniture. Users can browse products, manage their cart with data saved in local storage, and use an admin panel to add or delete products.',
+    tech: ['HTML', 'CSS', 'JavaScript', 'Local Storage'],
+    github: 'https://github.com/ayushkothari1/SHOPDE',
+    live: 'https://shopde-phi.vercel.app/',
+  },
 ];

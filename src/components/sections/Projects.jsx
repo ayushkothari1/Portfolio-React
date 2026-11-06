@@ -89,7 +89,7 @@ export default function Projects() {
           <div className="other-projects-grid">
             {otherProjects.map((project) => (
               <article className="other-project-card" key={project.id}>
-                <div className="other-project-title"><h3>{project.title}</h3><span>Personal project</span></div>
+                <div className="other-project-title"><h3>{project.title}</h3><span>{project.category || 'Personal project'}</span></div>
                 <p className="project-description">{project.description}</p>
                 <div className="project-tech" aria-label={`${project.title} technologies`}>
                   {project.tech.map((technology) => <Badge key={technology}>{technology}</Badge>)}
